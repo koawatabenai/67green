@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="67Green">
+  <meta name="descrption" content="清潔感のある女性に優しい緑多い雑貨屋">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>67Green</title>
+  <link rel="shortcut icon" href="67green_favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One|Josefin+Slab" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>67<span>Green</span></h1>
+  </header>
+
+  <div class="wrap">
+    <nav>
+      <ul class="gnav">
+        <li><a href="./" class="link">TOP</a></li>
+        <li><a href="./" class="link">ITEM</a></li>
+        <li><a href="./" class="link">MAP</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="top" class="content">
+        <div class="mv">
+          <img src="images/main.jpg" alt="緑あふれる過ごしやすい店内">
+        </div>
+        <section>
+          <h2>MESSAGE</h2>
+          <p>67Greenはグリーン専門店です。<br>落ち着いた空間で、ゆっくりお過ごしください。</p>
+          <p>来週の金曜日はタイムセール6時から行います。</p>
+        </section>
+      </div>
+
+      <section id="item" class="content">
+        <h2>ITEM</h2>
+        <dl>
+          <dt><img src="images/item1.jpg" alt="ウェア"></dt>
+          <dd>ガーデニング作業をオシャレに。</dd>
+          <dd class="price">6,980円</dd>
+        </dl>
+        <dl>
+          <dt><img src="images/item2.jpg" alt="鉢植え"></dt>
+          <dd>育てやすいグリーンネックレス。</dd>
+          <dd class="price">1,500円</dd>
+        </dl>
+        <dl>
+          <dt><img src="images/item3.jpg" alt="ポット"></dt>
+          <dd>インテリアにもなる木製ポット。</dd>
+          <dd class="price">700円</dd>
+        </dl>
+      </section>
+
+      <section id="map" class="content">
+        <h2>MAP</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4048082508643!2d139.71781171525905!3d35.69165478019189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cee42ff4449%3A0x6052b106595091b1!2z44CSMTYwLTAwMDUg5p2x5Lqs6YO95paw5a6_5Yy65oSb5L2P55S677yS77yS!5e0!3m2!1sja!2sjp!4v1539666545658" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+
+    </main>
+  </div><!-- /.content -->
+
+  <footer>
+    <p>Copyright 2016 67Green.</p>
+  </footer>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+  var $link = $('.link'),
+      $content = $('.content');
+
+      $content.hide().eq(0).show();
+
+  $link.eq(0).addClass('is-active');
+
+  $link.each(function () {
+    $(this).on('click', function (e) {
+      e.preventDefault();
+
+      var index = $link.index(this);
+     
+      $link.removeClass('is-active');
+      $(this).addClass('is-active');
+
+      $('.content').hide();
+      $('.content').eq(index).fadeIn(500);
+    });
+  });
+});
+</script>
+</body>
+</html>
+
+
+
+
+
